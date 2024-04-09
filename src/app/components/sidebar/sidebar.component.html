@@ -1,0 +1,76 @@
+<div class="sidebar-wrapper shadow-lg pt-1 bg-green-500" *ngIf="isLoggedIn()">
+  <div class="togglebtnwrapper" [ngClass]="{'removepadding': !sidebarVisible}">
+    <h2 class="text-xl font-bold text-white" [ngClass]="{'hide-logo': !sidebarVisible}">
+      <img src="assets/bnaa.png" alt="Dashboard Screenshot" class="img rounded" width="40px" height="40px;">
+      <span>BNA</span>
+    </h2>
+    <button (click)="toggleSidebar()" class="toggle-button">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="sidebar bg-green-600" [ngClass]="{'removepadding': !sidebarVisible}">
+    <nav class="h-screen">
+      <ul>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/dashboard"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-tachometer-alt"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">Dashboard</span>
+          </a>
+        </li>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/transaction"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-money-bill-wave"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">Transaction</span>
+          </a>
+        </li>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/facture"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">Facture</span>
+          </a>
+        </li>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/mandat"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-file-signature"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">Mandat</span>
+          </a>
+        </li>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/facturebank"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-file-signature"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">facture-action</span>
+          </a>
+        </li>
+
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/myfacture"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-file-signature"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">myfacture-action</span>
+          </a>
+        </li>
+        
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/user/profile"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-user"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">User Profile</span>
+          </a>
+        </li>
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/account/transaction-history"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-history"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">Transaction History</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

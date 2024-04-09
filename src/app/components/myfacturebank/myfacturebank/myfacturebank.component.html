@@ -1,0 +1,104 @@
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" >
+     
+<div class="facture-container">
+    <a href="/myfacture/create">create facture</a>
+    <h2 class="facture-heading">Manage Invoices</h2>
+    <div class="facture-list">
+      <div class="facture-item" *ngFor="let facture of factures">
+        <h3 class="facture-title">{{ facture.username }}</h3>
+        <p class="facture-details">Amount: {{ facture.amount }}</p>
+        <p class="facture-details">Due Date: {{ facture.factname }}</p>
+
+        <img  src="{{facture.photo}}" class="img"    />
+
+        <button class="facture-action-button">View</button>
+      </div>
+    </div>
+  </div>
+  
+<div class="container">
+        <div class="invoice">
+            <div class="row">
+                <div class="col-7">
+                    <img src="../../../assets/bnaa.png" class="logo"/>
+                </div>
+                <div class="col-5">
+                    <h1 class="document-type display-4">FACTURE </h1>
+                    <p class="text-right"><strong th:text="${invoiceReference}">Référence facture</strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
+                    <p class="addressMySam">
+                        <strong>BNA</strong><br/>
+                       
+                    </p>
+                </div>
+                <div class="col-5">
+                    <br/><br/><br/>
+                    <p class="addressDriver">
+                        <strong th:text="${driver.getCompanyName()}">Société BNA</strong><br/>
+                        Réf. Client <em th:text="${driver.getUserId()}">Référence client</em><br/>
+                        <span th:text="${driver.getFirstName()}">Prénom</span> <span
+                            th:text="${driver.getLastName()}">NOM</span><br/>
+                        <span th:text="${driver.getAddress()}">adresse</span><br/>
+                        <span th:text="${driver.getZipCode()}">code postal</span> <span
+                            th:text="${driver.getCity()}">VILLE</span>
+                    </p>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <h6>Frais de services MYSAM du <span th:text="${start}">date</span> au <span th:text="${end}">date</span>
+            </h6>
+            <br/>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <!--<th>Quantité</th>-->
+                    <!--<th>Unité</th>-->
+                    <!--<th>PU TTC</th>-->
+                    <th>TVA</th>
+                    <th class="text-right">Total HT</th>
+                    <th class="text-right">Total TTC</th>
+                    <th>#</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let facture of factures">
+                        <td>{{ facture.factname }} <span th:text="${start}">{{facture.accountNumber}}</span> 
+                    <!--<td>13</td>-->
+                    <!--<td>Kilomètres</td>-->
+                    <!--<td class="text-right">1,20€</td>-->
+                    <td>{{ facture.factname }} </td>
+                    <td class="text-right" th:text="${summaryDriverClientsPayment.get('mysamHT')}">{{ facture.amount }}dt </td>
+                    <td class="text-right" th:text="${summaryDriverClientsPayment.get('mysamTTC')}">{{ facture.amount }} dt </td>
+                   <td> <img  src="{{facture.photo}}" class="img"    /></td>
+
+                    </tr>
+               
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-4">
+                   
+                </div>
+            </div>
+
+  
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+           
+        </div>
+    </div>
