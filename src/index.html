@@ -63,6 +63,25 @@ highlight(0)
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
+
+    <script>
+     
+  
+      $('#myForm1').on('submit', function(e){
+        $('#myModal').modal('show');
+        e.preventDefault();
+      });
+
+      $('#myForm2').on('submit', function(e){
+        $('#myModal').modal('show');
+        e.preventDefault();
+      });
+      $('#myForm').on('submit', function(e){
+          $('#myModal').modal('show');
+          e.preventDefault();
+        });
+    </script>
+    
 </body>
 
 </html>

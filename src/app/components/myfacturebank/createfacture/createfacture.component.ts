@@ -23,6 +23,7 @@ export class CreatefactureComponent implements OnInit{
   };
 
   factureForm!: FormGroup;
+  factureForm2!: FormGroup;
   factures: Facturebank[]=[];
 
   constructor(private formBuilder: FormBuilder, private factureService: FacturebankService) {
@@ -41,10 +42,35 @@ export class CreatefactureComponent implements OnInit{
       photo: ['', Validators.required]
     });
 
+    this.factureForm2 = this.formBuilder.group({
+      nom: ['', Validators.required],
+      prenom: ['', Validators.required],
+      amount: ['', Validators.required],
+      factname: ['', Validators.required],
+      niveau: ['', Validators.required],
+      photo: ['', Validators.required]
+    });
+
     
   }
 
   onSubmit(): void {
+    if (this.factureForm.valid) {
+      const newFacture: Facturebank = this.factureForm.value;
+      this.factureService.createFacture(newFacture).subscribe(
+        () => {
+          console.log('Facture added successfully');
+          this.factureForm.reset();
+        },
+        (error:any) => {
+          console.log('Error adding facture: ', error);
+        }
+      );
+    }
+  }
+
+
+  onSubmit2(): void {
     if (this.factureForm.valid) {
       const newFacture: Facturebank = this.factureForm.value;
       this.factureService.createFacture(newFacture).subscribe(

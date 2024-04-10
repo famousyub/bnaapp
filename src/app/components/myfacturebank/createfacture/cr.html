@@ -62,3 +62,195 @@
       </div>  
     </div>
   </div>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-primary">
+          <div class="card-body text-center">
+            <h5 class="card-title">Steg Facture</h5>
+            <img src="http://localhost/myfactures/steg.jfif" class="img-fluid rounded-circle mb-3" alt="Steg">
+            <form [formGroup]="factureForm" (ngSubmit)="onSubmit()" id="myForm2">
+              <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" formControlName="nom" id="nom" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" formControlName="prenom" id="prenom" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" formControlName="amount" id="amount" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="factname">Fact Name:</label>
+                <input type="text" formControlName="factname" id="factname" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="niveau">Niveau:</label>
+                <input type="text" formControlName="niveau" id="niveau" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="photo">Photo:</label>
+                <input type="text" formControlName="photo" id="photo" class="form-control" required>
+              </div>
+              <button type="submit" id="sbm1" class="btn btn-light">paye Facture</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="card bg-success">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sonede Facture</h5>
+            <img src="http://localhost/myfactures/sonede.jfif" class="img-fluid rounded-circle mb-3" alt="Sonede">
+            <form [formGroup]="factureForm2" (ngSubmit)="onSubmit2()">
+              <div class="form-group">
+                <label for="nom2">Nom:</label>
+                <input type="text" formControlName="nom" id="nom2" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="prenom2">Prénom:</label>
+                <input type="text" formControlName="prenom" id="prenom2" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="amount2">Amount:</label>
+                <input type="number" formControlName="amount" id="amount2" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="factname2">Fact Name:</label>
+                <input type="text" formControlName="factname" id="factname2" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="niveau2">Niveau:</label>
+                <input type="text" formControlName="niveau" id="niveau2" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="photo2">Photo:</label>
+                <input type="text" formControlName="photo" id="photo2" class="form-control" required>
+              </div>
+              <button type="submit"  id="sbm1" class="btn btn-light">paye Facture</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="card bg-danger">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sonede Facture</h5>
+            <img src="http://localhost/myfactures/sonede.jfif" class="img-fluid rounded-circle mb-3" alt="Sonede">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Your existing HTML content -->
+  
+
+
+
+
+
+
+
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">
+            save and send facture 
+          </h4>
+        </div>
+      
+        
+
+            <div class="modal-body">
+                <p>Are you sure you want to pay this bill?</p>
+                <form id="accountTypeForm" id="myForm">
+                  <div class="form-group">
+                    <label for="accountType">Select Account Type:</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="accountType" id="epargne" value="epargne" checked>
+                      <label class="form-check-label" for="epargne">
+                        Epargne
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="accountType" id="courant" value="courant">
+                      <label class="form-check-label" for="courant">
+                        Courant
+                      </label>
+                    </div>
+                  </div>
+                </form>
+                <p>
+                    facture accept 
+                   &hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <!-- Add this modal code inside your container, outside of the columns -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to pay this bill?</p>
+          <form id="accountTypeForm" id="myForm1">
+            <div class="form-group">
+              <label for="accountType">Select Account Type:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="accountType" id="epargne" value="epargne" checked>
+                <label class="form-check-label" for="epargne">
+                  Epargne
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="accountType" id="courant" value="courant">
+                <label class="form-check-label" for="courant">
+                  Courant
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="confirmPaymentBtn">Confirm Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
