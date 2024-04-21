@@ -45,6 +45,9 @@ import { FacturemodalComponent } from './components/facturemodal/facturemodal.co
 import { MyfactureModule } from './components/myfacture/myfacture.module';
 import { CreatefactureComponent } from './components/myfacturebank/createfacture/createfacture.component';
 import { MyfacturebankComponent } from './components/myfacturebank/myfacturebank/myfacturebank.component';
+import { TransactionhomeComponent } from './components/transaction/transactionhome/transactionhome.component';
+import { DashchartComponent } from './components/dashchart/dashchart.component';
+import { AcoountsModule } from './components/acoounts/acoounts.module';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,12 @@ import { MyfacturebankComponent } from './components/myfacturebank/myfacturebank
     BankmodalComponent,
     FacturemodalComponent,
     CreatefactureComponent,
-    MyfacturebankComponent
+    MyfacturebankComponent,
+    TransactionComponent,
+    TransactionHistoryComponent,
+    DashchartComponent,
+  
+    //TransactionhomeComponent
   ],
   imports: [
     RouterModule,
@@ -91,7 +99,8 @@ import { MyfacturebankComponent } from './components/myfacturebank/myfacturebank
     ChartsModule,
     TransactionModule,
     TransactionRoutingModule,
-    MyfactureModule
+    MyfactureModule,
+   
 
 
   ],
@@ -107,6 +116,7 @@ import { MyfacturebankComponent } from './components/myfacturebank/myfacturebank
     AccountdetailcardComponent,
     AccountPinComponent,
     UserprofilecardComponent,
+    
     
   ]
 })

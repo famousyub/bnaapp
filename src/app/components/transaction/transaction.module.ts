@@ -7,12 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { UserprofilecardComponent } from '../userprofilecard/userprofilecard.component';
+import { AppModule } from 'src/app/app.module';
 
 
 
 @NgModule({
   declarations: [
     TransactionhomeComponent,
+    //UserprofilecardComponent
     // DepositComponent,
     // WithdrawComponent,
     // FundTransferComponent,
@@ -30,8 +33,13 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+   
+   
     
    
+  ],
+  exports:[
+    TransactionhomeComponent
   ]
 })
 export class TransactionModule { }

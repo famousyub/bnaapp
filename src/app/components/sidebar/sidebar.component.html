@@ -20,6 +20,24 @@
           </a>
         </li>
         <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/myaccount"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-tachometer-alt"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">myaccount</span>
+          </a>
+        </li>
+
+        <li class="mb-5">
+          <a routerLinkActive="active-link" routerLink="/dashchart"
+            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
+            <i class="fas fa-tachometer-alt"></i>
+            <span [ngClass]="{'hide-logo': !sidebarVisible}">dashchart</span>
+          </a>
+        </li>
+
+        
+        
+        <li class="mb-5">
           <a routerLinkActive="active-link" routerLink="/transaction"
             class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
             <i class="fas fa-money-bill-wave"></i>
@@ -40,14 +58,7 @@
             <span [ngClass]="{'hide-logo': !sidebarVisible}">Mandat</span>
           </a>
         </li>
-        <li class="mb-5">
-          <a routerLinkActive="active-link" routerLink="/facturebank"
-            class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">
-            <i class="fas fa-file-signature"></i>
-            <span [ngClass]="{'hide-logo': !sidebarVisible}">facture-action</span>
-          </a>
-        </li>
-
+       
         <li class="mb-5">
           <a routerLinkActive="active-link" routerLink="/myfacture"
             class="sidebar-link inline-flex items-center gap-4 w-full text-normal font-semibold text-white transition-colors duration-150">

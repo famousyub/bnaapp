@@ -1,4 +1,18 @@
 <div class="container mx-auto md:p-5 p-0">
+
+    <div class="cards-wrapper w-full flex gap-2">
+        <div class="w-full mb-2">
+          <app-userprofilecard></app-userprofilecard>
+        </div>
+        <div class="w-full mb-2">
+          <app-accountdetailcard></app-accountdetailcard>
+        </div>
+    
+       
+    
+    
+      </div>
+    
     <h1 class="text-2xl font-bold text-indigo-700 mb-6">{{showUpdateForm ? 'Edit':''}} User Profile</h1>
 
     <div *ngIf="!showUpdateForm" class="rounded-lg bg-white md:p-6 p-2 shadow-lg">

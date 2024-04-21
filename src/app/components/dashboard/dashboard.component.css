@@ -21,3 +21,105 @@
     display: flex;
     flex-direction: column;
 }
+
+.coverparentspace {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .carte {
+    width: calc(50% - 20px); /* Adjust based on your design */
+    margin-bottom: 40px;
+  }
+  
+  .pict {
+    position: relative;
+    padding-bottom: 60%; /* Aspect ratio for the image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  .row-black {
+    background-color: #000;
+    color: #fff;
+    min-height: 286px;
+    padding-top: 1.61%;
+    padding-bottom: 1.61%;
+    padding-left: 6.85% !important;
+    padding-right: 6.85% !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-col {
+    margin-top: 1.61%;
+    margin-bottom: 1.61%;
+}
+
+.card {
+    background-color: transparent !important;
+    border-radius: 30px;
+    min-height: 350px;
+    height: 100%;
+    max-height: 350px;
+    border: none !important;
+    background: transparent;
+}
+
+.card-img {
+    border-radius: 30px;
+    height: 100%;
+    border: none !important;
+    margin: 0;
+    padding: 10px;
+}
+
+.card-img-overlay {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+    justify-items: center;
+    border: none !important;
+}
+
+.card-title {
+    text-align: center;
+    border: none;
+}
+
+.grad-bg1 {
+    background: -moz-linear-gradient(135deg, rgba(60, 176, 219, 1) 0%, rgba(6, 26, 85, 1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(60, 176, 219, 1) 0%, rgba(6, 26, 85, 1) 100%);
+    background: linear-gradient(135deg, rgba(60, 176, 219, 1) 0%, rgba(6, 26, 85, 1) 100%);
+    height: 100%;
+    width: 100%;
+    border: none !important;
+
+	border-radius: 30px;
+}

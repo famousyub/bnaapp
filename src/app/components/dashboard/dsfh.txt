@@ -1,0 +1,27 @@
+<div class="coverparentspace">
+
+  <div class="section wrapper">
+    <div class="section-row">
+      <div *ngFor="let menuItem of menuItems" class="carte">
+        <div class="pict" [style.background-image]="'url(' + menuItem.imageUrl + ')'">
+          <div class="textBlock">
+            <h2 class="alignLeft">{{ menuItem.title }}</h2>
+            <div>
+              <p>{{ menuItem.description }}</p>
+            </div>
+            <a [href]="menuItem.link"><div class="visit">accéder</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+</div>
+
+<!-- <app-transaction-history></app-transaction-history>
+<app-pin-creation-model *ngIf="showPINCreationModel" (redirect)="redirectToPINCreationPage()"></app-pin-creation-model> -->

@@ -26,6 +26,9 @@ import { BankactionModule } from './components/bankaction/bankaction.module';
 import { BankfactureComponent } from './components/bankfacture/bankfacture.component';
 import { MyfacturebankComponent } from './components/myfacturebank/myfacturebank/myfacturebank.component';
 import { CreatefactureComponent } from './components/myfacturebank/createfacture/createfacture.component';
+import { AccountsComponent } from './components/acoounts/accounts/accounts.component';
+import { DashchartComponent } from './components/dashchart/dashchart.component';
+import { CreateacoountsComponent } from './components/acoounts/createacoounts/createacoounts.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' }, // Root route (HomeComponent) without AuthGuard
@@ -53,6 +56,10 @@ const routes: Routes = [
   },
 
   { path: 'transaction', component: TransactionhomeComponent, canActivate: [AuthGuard] },
+
+  { path: 'myaccount', component: CreateacoountsComponent, canActivate: [AuthGuard] },
+  
+  { path: 'dashchart', component: DashchartComponent, canActivate: [AuthGuard] },
   
   { path: 'account', component: AccountdetailcardComponent, canActivate: [AuthGuard] },
   { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard] },

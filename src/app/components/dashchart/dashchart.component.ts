@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-dashchart',
+  templateUrl: './dashchart.component.html',
+  styleUrls: ['./dashchart.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashchartComponent implements OnInit {
   showPINCreationModel: boolean = false;
 
   constructor(private apiService: ApiService, private router: Router) {}
@@ -65,4 +65,5 @@ export class DashboardComponent implements OnInit {
     // Redirect the user to the PIN creation page.
     this.router.navigate(['/account/pin']);
   }
+
 }
