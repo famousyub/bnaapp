@@ -1,5 +1,5 @@
 .sidebar-wrapper {
-  background-color: rgb(177, 200, 182) !important;
+  background-color: rgb(214, 215, 224) !important;
 }
 
 .togglebtnwrapper {
@@ -24,7 +24,7 @@
 .sidebar {
   overflow: hidden;
   transition: all 0.3s;
-  background-color: rgb(170, 190, 192);
+  background-color: rgb(44, 94, 103);
   padding: 10px 50px 10px 10px;
 }
 

@@ -77,6 +77,8 @@
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let account of accounts">
           {{ account.accountNumber }} - Balance: {{ account.balance }}
+
+          <p>{{account.account_type}}</p>
         </li>
       </ul>
     </div>

@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-BoldItalic.woff2') format('woff2'),
+        url('Rawline-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-SemiBoldItalic.woff2') format('woff2'),
+        url('Rawline-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Bold.woff2') format('woff2'),
+        url('Rawline-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Thin.woff2') format('woff2'),
+        url('Rawline-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-ExtraBold.woff2') format('woff2'),
+        url('Rawline-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-BlackItalic.woff2') format('woff2'),
+        url('Rawline-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-ExtraBoldItalic.woff2') format('woff2'),
+        url('Rawline-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Black.woff2') format('woff2'),
+        url('Rawline-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-ExtraLight.woff2') format('woff2'),
+        url('Rawline-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Light.woff2') format('woff2'),
+        url('Rawline-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-ThinItalic.woff2') format('woff2'),
+        url('Rawline-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-ExtraLightItalic.woff2') format('woff2'),
+        url('Rawline-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-LightItalic.woff2') format('woff2'),
+        url('Rawline-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Regular.woff2') format('woff2'),
+        url('Rawline-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Italic.woff2') format('woff2'),
+        url('Rawline-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-SemiBold.woff2') format('woff2'),
+        url('Rawline-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Medium.woff2') format('woff2'),
+        url('Rawline-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Medium.woff2') format('woff2'),
+        url('Rawline-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

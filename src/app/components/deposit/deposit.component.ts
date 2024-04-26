@@ -5,6 +5,7 @@ import { ToastService } from 'angular-toastify';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
 import { LoadermodelService } from 'src/app/services/loadermodel.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-deposit',
@@ -34,30 +35,51 @@ export class DepositComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.depositForm?.valid) {
-      const amount = this.depositForm.get('amount')?.value;
-      const pin = this.depositForm.get('pin')?.value;
 
-      if (amount !== null && pin !== null) {
-        this.loader.show('Depositing...'); // Show the loader before making the API call
-        this.apiService.deposit(amount, pin).subscribe(
-          (response) => {
-            this.loader.hide(); // Hide the loader on successful deposit
-            // Handle successful deposit if needed
-            this._toastService.success(response.msg);
-            this.depositForm.reset();
-            console.log('Deposit successful!', response);
-          },
-          (error) => {
-            this.loader.hide(); // Hide the loader on deposit request failure
-            // Handle error if the deposit request fails
-            this._toastService.success(error.error || 'Deposit failed');
-            console.error('Deposit failed:', error);
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This process is irreversible.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire('Removed!', 'Deposit successful!', 'success');
+
+        if (this.depositForm?.valid) {
+          const amount = this.depositForm.get('amount')?.value;
+          const pin = this.depositForm.get('pin')?.value;
+    
+          if (amount !== null && pin !== null) {
+            this.loader.show('Depositing...'); // Show the loader before making the API call
+            this.apiService.deposit(amount, pin).subscribe(
+              (response) => {
+                this.loader.hide(); // Hide the loader on successful deposit
+                // Handle successful deposit if needed
+                this._toastService.success(response.msg);
+                this.depositForm.reset();
+                console.log('Deposit successful!', response);
+              },
+              (error) => {
+                this.loader.hide(); // Hide the loader on deposit request failure
+                // Handle error if the deposit request fails
+                this._toastService.success(error.error || 'Deposit failed');
+                console.error('Deposit failed:', error);
+              }
+            );
           }
-        );
+        }
+    
+        this.initDepositForm();
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'Product still in our database.)', 'error');
       }
-    }
+    });
+  
 
-    this.initDepositForm();
+
+    
   }
 }

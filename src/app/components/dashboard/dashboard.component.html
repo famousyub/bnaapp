@@ -18,9 +18,9 @@
 
       <div *ngFor="let menuItem of menuItems" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 carte">
         <div class="pict" [style.background-image]="'url(' + menuItem.imageUrl + ')'">
-          <div class="textBlock">
+          <div class="pictBlock">
             <h2 class="alignLeft">{{ menuItem.title }}</h2>
-            <div>
+            <div class="pictBlock">
               <p>{{ menuItem.description }}</p>
             </div>
             <a [href]="menuItem.link"><div class="visit">accéder</div></a>
@@ -34,13 +34,9 @@
 
   <div class="row row-flex d-flex row-black align-items-stretch">
     <div class="col-md-6 col-xl-4 card-col">
-        <div class="card border-dark">
-            <div class="card-img-overlay grad-bg1">
-                <h1 class="text-center"><i class="fa fa-flask text-light" aria-hidden="true"></i></h1>
-                <h3 class="card-title">BNA </h3>
-                <h5 class="card-text text-center">It's a lab!</h5>
-            </div>
-        </div>
+        <div class="footerBas"><div class="wrapper"><div class="footer-group"><div class="footer-section"><div class="logo"></div><div class="join">REJOIGNEZ-NOUS !</div><div class="links"><a href="http://www.bna.tn/fr/mediateur-bancaire.191.html" target="blank">Médiateur bancaire</a> <!-- -->|&nbsp;<a href="http://www.bna.tn/fr/mentions-legales.772.html" target="blank">Mentions légales</a> <!-- -->|&nbsp;<a href="http://www.bna.tn/fr/droit-d-acces-a-l-information.956.html" target="blank">Droit d’Accès à l’Information</a> <br><a href="http://www.bna.tn/fr/nos-tarifs.608.html" target="blank">Nos Tarifs</a> <!-- -->| &nbsp;<a href="http://www.bna.tn/fr/nos-delais.937.html" target="blank">Nos délais</a> <!-- -->| &nbsp;<a href="http://www.bna.tn/fr/controle-de-la-conformite.850.html" target="blank">Contrôle de la conformité</a> <!-- -->|&nbsp;<a href="https://www.yumpu.com/fr/embed/view/CPfvealLJBAmRG6p?id_article=1013" target="blank">Code déontologique</a></div></div><div class="footer-section"><div class="cell"><div class="cellTitle">ADRESSE</div><div class="cellText">Avenue Mohamed V <br>Bab Bhar – 1002 Tunis<br><br>Tél&nbsp;: 71&nbsp;831&nbsp;000 - 71&nbsp;831&nbsp;200<br><br><span style="color:#009A74">N° Vert&nbsp;: 80&nbsp;100&nbsp;505</span></div></div><div class="cell"><div class="cellTitle">Contactez-nous par mail :</div><div class="cellText">bna@bna.tn <br>marketing@bna.tn <br><br></div></div></div></div><div class="footer-section"><div class="cell"><div class="cellTitle">RECEVEZ NOTRE NEWSLETTER</div><div class="newsletter"><input class="input" placeholder="Votre adresse email ici"><div class="nlButton">Envoyer</div></div><div class="socials-wrapper"><div class="cellTitle">SUIVEZ-NOUS </div><div class="cellText"><div class="socialIcon socialFb"><a href="https://www.facebook.com/BanqueNationaleAgricole/?id_article=127" target="blank"></a></div><div class="socialIcon socialtw"><a href="https://www.instagram.com/bna.bank/" target="blank"></a></div><div class="socialIcon socialyt"><a href="https://twitter.com/BnaTunisie" target="blank"></a></div><div class="socialIcon socialin"><a href="https://www.youtube.com/channel/UCri3iw1ovBzNb2ENb7XzQqg" target="blank"></a></div><div class="socialIcon socialins"><a href="https://www.linkedin.com/company/bnabank" target="blank"></a></div></div></div></div></div></div><div class="credit">Copyright © Banque Nationale Agricole - 2020 - Tous droits réservés</div></div>
+
+
     </div>
 </div>
 
